@@ -1,0 +1,49 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash /home/kalami/.claude/hooks/notify-done.sh",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "telegram@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "skill-creator@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true
+  },
+  "effortLevel": "high",
+  "tui": "fullscreen",
+  "skipDangerousModePermissionPrompt": true,
+  "agentPushNotifEnabled": true,
+  "skipAutoPermissionPrompt": true,
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ]
+    },
+    "superpowers": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "/mnt/e/workspace/superpowers-mcp/build/index.js"
+      ]
+    },
+    "openspec": {
+      "type": "stdio",
+      "command": "/home/kalami/.local/share/mcp-venvs/openspec/bin/python",
+      "args": [
+        "-m",
+        "openspec_mcp"
+      ]
+    }
+  }
+}
