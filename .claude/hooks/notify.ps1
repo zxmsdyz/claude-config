@@ -1,4 +1,4 @@
-param([string]$Title = "Claude Code", [string]$Line = "任务已完成")
+﻿param([string]$Title = "Claude Code", [string]$Line = "任务已完成")
 
 # ① Windows toast 通知
 try {
